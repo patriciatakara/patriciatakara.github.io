@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  
+<head>
+  <title>Schedule a Trip</title>
+  <meta charset="utf-8">
+  <link rel="icon" href="cutlery.ico">
+  <link href="aa.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="aa.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.17.0/jquery.validate.min.js"></script>
+  <script>
+      function captureFormData(f) 
+      {
+        // data will contain comma separated values for popup box
+        var data = "", i, len;
+        
+        // set len to number of form elements f contains
+        len = f.length;
+
+        // traverse elements, one by one, where i is current element
+        for (i = 0; i < len; i++)  
+        {
+          // append value of current form element to data
+          data = data + f.elements[i].value;
+
+          // if not at end of form, so not last form element yet
+          if (i < len-1) 
+          { 
+            data += ", ";  // append comma
+          }
+        }
+        // in pop up display comma separated values stored in data
+        alert (data);  
+      }
+    </script>
+</head>
+  
+<body>
+
+  <header>
+      <h1> <a class="hmbgr" onclick="toggleNavBar()"><i class="fa fa-bars"></i></a>Gastronomic Journeys</h1>
+  </header>
+
+  <nav id="navbar">
+    <ul>
+      <li><a href="index.html" title="Go to Home">Home</a></li>
+      <li><a href="aboutUs.html" title="Go to About Us">About Us</a></li>
+      <li><a href="journeys.html" title="Go to Journeys">Journeys</a></li>
+      <li><a href="scheduleATrip.html" class="menu-chosen" title="Go to Schedule a Trip"> Schedule a Trip</a></li>
+      <li><a href="testmonials.html" title="Go to Testimonials">Testimonials</a></li>
+    </ul>
+  </nav>
+
+  <div id="explore"></div>
+
+  <main>
+    <div class="grid-title">
+      <h2>Please Fill out the Form</h2> 
+      <p>Our team will contact you within 24 hour.</p>
+      <p>Required information is marked with an asterisk (*)</p>
+    </div>
+
+    <div style="text-align: left;">
+      <form id="frm">
+        <div class="grid-container">
+
+          <div class="rightJustify">
+            <label for="myFName"> First Name: </label>
+          </div>
+          <div class="leftJustify">
+            <input type="text" id="myFName" name="myFName" >
+          </div>
+    
+          <div class="rightJustify">
+            <label for="myLName"> Last Name: </label>
+          </div>
+          <div class="leftJustify">
+            <input type="text" id="myLName" name="myLName" >
+          </div>
+    
+          <div class="rightJustify">
+            <label for="myEmail">* E-mail: </label>
+          </div>
+          <div class="leftJustify">
+            <input type="email" id="myEmail" name="myEmail" required>
+          </div>
+          
+          <div class="rightJustify">
+            <label for="myJourney"> Journey: </label>
+          </div>
+          <div class="leftJustify">
+            <select id="myJourney" name="myJourney">
+
+              <option>Sao Paulo, Brazil</option>
+              <option>London, U.K.</option>
+              <option>Bangkok, Thailand</option>
+              <option>New York, U.S.</option>
+            </select>    
+          </div>    
+
+          <div class="rightJustify">
+            <label for="myDate">Journey Date: </label>
+          </div>
+          <div class="leftJustify">
+           <input type="date" id="myDate" name="myDate">
+          </div>
+      
+          <div class="rightJustify">
+           <label for="myGroup">How Many People: </label>
+          </div>
+          <div class="leftJustify">
+           <input type="number" id="myGroup" name="myGroup" min="1" max="15">
+          </div>
+      
+          <div class="rightJustify">
+           <label for="myDCode"> Discount Code: </label>
+          </div>
+          <div class="leftJustify">
+           <input type="text" id="myDCode" name="myDCode">
+          </div>
+      
+          <div class="rightJustify">
+           <label for="comments"> Comments:</label>
+          </div>
+          <div class="leftJustify">
+           <textarea id="comments" name="comments" rows="10" cols="35" ></textarea>
+          </div>
+      
+          <div class="rightJustify">
+           &nbsp;
+          </div>
+          <div class="leftJustify">
+           <input type="submit" id="mySubmit" value="Submit">
+          </div>
+        </div>    
+      </form>
+    </div>
+
+    <script>
+      $("#frm").validate();  // validate frm form elements
+
+      $(function () {
+        $('#frm').submit(function () {  // redefine submit for frm
+            if($(this).valid()) {  // if this form is valid
+                captureFormData(this);  // send it to captureFormData
+            }
+        });
+      });
+    </script>
+  </main>
+
+  <footer>
+    <p id="address">
+      Gastronomic Journeys<br>
+      651 Green Valley Road<br>
+      Wood Lake, Florida 21031<br> 
+      &copy; 2021 Gastronomic Journeys
+    </p>
+ </footer> 
+</body>  
+</html>

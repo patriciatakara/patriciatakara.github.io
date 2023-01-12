@@ -1,0 +1,430 @@
+body {
+    margin: 0;
+    background-color:rgb(68, 68, 68);
+    font-family: Helvetica, Arial, sans-serif;
+}
+/*strip and name of webpage*/
+header {
+    color:hsl(32,10%,95%);
+    font-family: Helvetica, serif;
+    background-image: url("media/wood2.jpg");
+    background-position:center;
+    background-repeat:no-repeat;
+    text-align: left; 
+    padding-top: 5px;
+    padding-bottom:25px;    
+    display:block;
+}
+
+.hmbgr{
+    padding-right:20px;
+}
+
+h1 {
+    text-align: left;
+    line-height:15px;
+    height:1px;
+    padding-left: 10px;
+}
+
+h2 {
+    text-align:left;
+    padding-left:10px;
+    color:hsl(32,25%,40%); 
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+h3 {
+    color:hsl(32,25%,40%)
+}
+
+nav {
+    background-color: rgb(68, 68, 68);
+    text-align: center;
+    font-weight: bold;
+    border: 2px solid hsl(32,25%,65%);
+    border-style:hidden;
+    padding: 0.4em;
+    position:sticky;
+    position:-webkit-sticky;
+    top:0;
+    display: block;
+}
+
+/*menu bar*/
+nav a {                 
+    text-decoration:none;
+    padding-top: 0;
+    padding-bottom: 1.0; 
+    padding-right: 2.8em;
+    padding-left: 2.8em;
+    font-size: 1.1em;
+    border-radius: 5px;
+}
+
+nav a:link {color:hsl(32,10%,95%);}
+nav a:visited {color: hsl(32,10%,95%);}
+nav a:hover {background-color:hsl(32,25%,40%);}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+nav li {display: inline; }
+
+
+main {
+   color: hsl(32,25%,40%);
+   font-size: 1.0em;
+   background-color:hsl(32,10%,95%);
+   padding: 50px 10px 50px 10px;
+}
+
+/*Journeys Page*/
+/* journeys list properties*/
+main ul{
+    list-style: none;
+    padding: 2px;
+    margin: 10px;
+    border-radius: 12px;
+ }
+
+main a{
+    text-decoration: none;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 8px;
+    border: hsl(32,25%,65%);
+}
+
+main a:visited{
+    color: rgb(68, 68, 68);
+}
+main a:hover{
+    background-color:hsl(32,25%,65%);
+    color: hsl(32,10%,95%);
+}
+main a:link{
+    color: rgb(68, 68, 68);
+}
+
+#invalid{
+    color: rgb(68, 68, 68);
+    padding:5px;
+    margin: 10px;
+}
+
+#invalid:hover{
+    background-color: none;
+}
+
+/*Home Page*/
+/*the most popular list characteristics of each text and button*/
+ol li{
+    display: inline;
+    font-weight: bold;
+    padding: 10px;
+    margin: 40px;
+    background-color:hsl(32,25%,65%);
+    color:hsl(32,10%,95%);
+    border-radius: 18px;
+}
+/*The most popular journeys list*/
+#menupop{
+    padding: 50px;
+    text-align: center;
+}
+#menupop a{
+    text-decoration: none;
+    color: hsl(32,10%,95%);
+    background-color: none;
+}
+#menupop a:hover{
+    color: hsl(197,16%,22%);
+}
+
+/* selected a page on navigation bar*/
+.menu-chosen{background-color:hsl(32,25%,65%);}
+
+/*background image on homepage*/
+#homepage {background-image: url(media/ff.jpg);}
+
+/*background image on schedule a trip*/
+#explore{background-image: url(media/explore.gif);}
+
+/*background image on Journeys*/
+#travelperson{background-image: url(media/travel02.gif);}
+
+
+#homepage{
+    background-color:hsl(32,10%,95%);
+    height: 400px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    image-resolution: 200dpi;
+}
+#travelperson{
+    height:625px;
+    width: 900px;
+    margin-bottom:5px;
+    float:right;
+    background-position:center;
+    background-attachment:scroll;
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+#explore{
+    background-color:hsl(32,10%,95%);
+    height: 701px;
+    width: 900px;
+    margin-bottom:10px;
+    float:right;
+    background-position: center;
+    background-attachment:scroll;
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+#collage{
+    height: 430px;
+    width: 635px;
+    margin-top: 25px;
+    image-resolution:100dpi;
+}
+
+*{ box-sizing: border-box;}
+
+footer {
+    display:block;
+    color: hsl(32,10%,95%);
+    background-color:rgb(68, 68, 68) ;
+    font-size:0.7em;
+    font-style: italic;
+}
+
+#address{
+    text-align: left;
+    float: left;
+    margin: 0;
+    padding: 2em;
+}
+
+@media only screen and (max-width:800px){
+    h1 {
+        line-height: 12px;
+        padding-right: 1.75em;
+        height: 15px;
+        margin: 0;
+        font-size: 1.6em;
+    }
+
+    nav {padding:0 }
+
+    nav a{
+        display: block;
+        padding:0.2em;
+        font-size:1em;
+    }
+
+    nav ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    nav li {
+        display: block;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        border-bottom: 1px;
+        border-style: solid;
+        color:hsl(32,10%,95%);
+    }
+
+    nav li:last-child{border-bottom: 0;}
+
+    main{padding: 0.4em;}
+
+    #homehero, #travelperson, #explore{ display: none;}
+
+    dd {
+        margin-bottom:85px;
+    }
+}
+
+@media only screen and (max-width:1050px){
+    
+    #menupop li{ 
+        display: block;
+        padding: 0.4em;
+        font-size:1.1em;
+    }
+
+    ol li{
+        display: block;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        border-bottom: 0px;
+        border-style:solid;
+        border-radius: 0.8em;
+        color:hsl(32,10%,95%);
+    }
+}
+
+@media only screen and (max-width:1384px){
+    #explore{ display: none;}
+}
+@media only screen and (max-width:1000px){
+    #collage{width: 458px;}
+}
+
+@media only screen and (max-width:1258px){
+    #travelperson{ display: none;}
+}
+
+
+
+dt {
+  font-weight: bold;
+  color: hsl(32,25%,40%);
+  border-bottom: 2px solid hsl(32,25%,40%);
+  margin-left: 1em;
+  margin-right: 1em;  
+}
+
+dd {
+    margin-bottom:120px;
+}
+
+table {
+    border-collapse:collapse;
+    margin-left:auto;
+    margin-right: auto;
+}
+
+th {
+    padding-right:20px;
+    padding-left:20px;
+    padding-top:10px;
+    padding-bottom: 10px;
+    background-color: hsl(32,25%,40%);
+    color:hsl(32,10%,95%);
+}
+
+td {
+    padding: 7px;
+    text-align: center;
+    border: 2px solid hsl(32,25%,40%);
+}
+
+.centerJustify {
+    text-align: center;
+}
+
+tr:nth-child(even) {
+     background-color:hsl(32,25%,85%)
+}
+
+table tr:last-child td {
+    border-bottom: 0px;
+}
+
+table tr td:first-child {
+    border-left:0; 
+ }
+ 
+table tr td:last-child {
+    border-right: 0;
+}
+
+label.error {
+    text-align: left;
+    margin-top: 5px;
+    padding-left: 8px;
+    color: red;
+    font: italic 0.75em Helvetica;
+}
+
+.grid-title{
+    text-align: justify;
+    display: inline-grid;
+    padding-left: 0px;
+}
+
+.grid-container {
+    text-align: justify;
+    display: inline-grid;
+    margin-left: auto;
+    margin-right:auto;
+    grid-template-columns: auto auto;
+    padding: 8px;
+    grid-column-gap:15px;
+    grid-row-gap:10px;
+}
+
+#purpose{
+    float: left;
+    color: hsl(32,25%,40%);
+    width: fit-content;
+    text-align: justify;
+    padding-right:60px;
+    padding-left: 30px;
+}
+
+.frm{
+    align-content: space-around;
+}
+
+#testimonials{
+    font-size: 1.0em;
+    text-align: justify;
+    color: hsl(32,40%,40%);
+    font-style: italic;
+    width: fit-content;
+    background-color:hsl(32,25%,85%);
+    padding: 10px;
+    border-radius: 15px;
+}
+
+#testimonials2{
+    font-size: 1.0em;
+    text-align: justify;
+    color:hsl(32,40%,40%);
+    font-style: italic;
+    width: fit-content;
+    background-color:hsl(32,25%,85%);
+    padding: 10px;
+    border-radius: 15px;
+}
+
+#spintro{
+    font-size: 1.1em;
+    padding-left: 10px;
+    text-align: justify;
+    color: hsl(32,25%,40%);        
+    padding: 10px;
+    border-radius: 15px;
+    width: fit-content;
+    margin: 25px;
+}
+
+.description{
+    text-align: justify;
+    font-size: 1.1em;
+    color: hsl(32,25%,40%);
+    font-style: italic;
+    width: fit-content;
+    padding: 2px;
+    margin-top: 10px;
+}
+
+/* Food images on Sao Paulo page*/
+#foods{
+    float: right;
+    height:140px;
+    margin-left:0px;
+    padding:10px
+}
